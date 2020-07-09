@@ -3,7 +3,6 @@ import Button from './Button'
 import PropsTypes from 'prop-types';
 
 const ButtonPannel = () => {
-  console.log(<Button {...'AC'}/>)
   return (
     <div className=''>
       <div>

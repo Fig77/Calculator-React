@@ -6,15 +6,15 @@ import Display from './Display'
 
 
 class App extends Component {
-  state = {
-    result: '0',
-  };
-  
+state = {
+    result: "0",
+};
+
 render() {
   const { result } = this.state;
   return (
     <div className="App">
-      <div><Display result={result}/></div>
+      <Display result = {result} />
       <div>
         <ButtonPanel />
       </div>
