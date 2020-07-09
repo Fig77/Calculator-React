@@ -11,10 +11,10 @@ class App extends Component {
   };
   
 render() {
-  const { result } = this.sate;
+  const { result } = this.state;
   return (
     <div className="App">
-      <div><Display reuslt={result}/></div>
+      <div><Display result={result}/></div>
       <div>
         <ButtonPanel />
       </div>
