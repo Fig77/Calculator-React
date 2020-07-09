@@ -1,18 +1,25 @@
-import React from 'react';
-import logo from '../logo.svg';
+/* eslint-disable react/state-in-constructor */
+import React, { Component } from 'react';
 import '../syles/App.css';
 import ButtonPanel from './ButtonPanel'
 import Display from './Display'
 
-const App = () => {
+
+class App extends Component {
+  state = {
+    result: '0',
+  };
+  
+render() {
+  const { result } = this.sate;
   return (
     <div className="App">
-      <div><Display text='0'/></div>
+      <div><Display reuslt={result}/></div>
       <div>
         <ButtonPanel />
       </div>
     </div>
   );
+ };
 }
-
 export default App;

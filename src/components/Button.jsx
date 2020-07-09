@@ -1,10 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = (props) => {
-  console.log(props);
+const Button = ({value}) => {
   return (
-    <button>{props.text}</button>
+    <button>{value}</button>
   );
+  
+  Button.propTypes = {
+   value: PropTypes.string.isRequired,
+  };
 }
 
 export default Button;

@@ -1,37 +1,39 @@
 import React from 'react';
 import Button from './Button'
+import PropsTypes from 'prop-types';
+
 const ButtonPannel = () => {
   console.log(<Button {...'AC'}/>)
   return (
     <div className=''>
       <div>
-        <Button text='AC'/>
-        <Button text='+'/>
-        <Button text='-'/>
-        <Button text='%'/>
+        <Button value='AC'/>
+        <Button value='+'/>
+        <Button value='-'/>
+        <Button value='%'/>
       </div>
       <div>
-        <Button text='7'/>
-        <Button text='8'/>
-        <Button text='9'/>
-        <Button text='7'/>
+        <Button value='7'/>
+        <Button value='8'/>
+        <Button value='9'/>
+        <Button value='7'/>
       </div>
       <div>
-        <Button text='4'/>
-        <Button text='5'/>
-        <Button text='6'/>
-        <Button text='-'/>
+        <Button value='4'/>
+        <Button value='5'/>
+        <Button value='6'/>
+        <Button value='-'/>
       </div>
       <div>
-        <Button text='1'/>
-        <Button text='2'/>
-        <Button text='3'/>
-        <Button text='+'/>
+        <Button value='1'/>
+        <Button value='2'/>
+        <Button value='3'/>
+        <Button value='+'/>
       </div>
       <div>
-        <Button text='0'/>
-        <Button text='-'/>
-        <Button text='='/>
+        <Button value='0'/>
+        <Button value='-'/>
+        <Button value='='/>
       </div>
     </div>
   );
