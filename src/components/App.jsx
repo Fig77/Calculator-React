@@ -11,7 +11,7 @@ class App extends Component {
     this.status = {
       result: '0',
     };
-  };
+  }
 
   render() {
     const { result } = this.state;
