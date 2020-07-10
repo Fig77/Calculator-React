@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from './Button'
-import PropsTypes from 'prop-types';
 
 const ButtonPannel = () => {
   return (
