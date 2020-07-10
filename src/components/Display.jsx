@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = (prop) => {
-  
-  const { result } = prop;
-  
+const Display = props => {
+  const { result } = props;
+
   return (
     <div>
       <h1>{result}</h1>
     </div>
-  ); 
+  );
 };
 
 Display.propTypes = {
