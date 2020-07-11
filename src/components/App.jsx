@@ -1,11 +1,27 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import '../syles/App.css';
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.status = {
+      result: '0',
+    };
+  }
+
+  render() {
+    const { result } = this.status;
+    return (
+      <div className="App">
+        <Display result={result} />
+        <div>
+          <ButtonPanel />
+        </div>
+      </div>
+    );
+  }
 }
-
 export default App;
