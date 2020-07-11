@@ -14,10 +14,11 @@ class App extends Component {
 
   render() {
     const { result } = this.status;
+    
     return (
-      <div className="App">
+      <div className="App d-flex flex-column  justify-c-column align-i-center">
         <Display result={result} />
-        <div>
+        <div class="calculator">
           <ButtonPanel />
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './Button';
 
+const wide = true;
+let color = '#ff5722';
 const ButtonPanel = () => ( 
   <div className="">
     <div className="group">
@@ -28,12 +30,11 @@ const ButtonPanel = () => (
       <Button value="+" />
     </div>
     <div className="group">
-      <Button value="0" />
+      <Button value="0" wide={wide}/>
       <Button value="-" />
       <Button value="=" />
     </div>
   </div>
-
 );
   
 export default ButtonPanel;
