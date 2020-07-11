@@ -5,7 +5,7 @@ import Display from './Display';
 
 const App  = () => {
 return (
-  <div className="App">
+  <div className="App d-flex flex-column justify-c-center align-i-center">
     <Display />
     <div>
       <ButtonPanel />

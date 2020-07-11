@@ -4,7 +4,7 @@ import Button from './Button';
 const wide = true;
 let color = '#ff5722';
 const ButtonPanel = () => ( 
-  <div className="">
+  <div className="calculator">
     <div className="group">
       <Button value="AC" color={color} />
       <Button value="+/-" color={color} />
