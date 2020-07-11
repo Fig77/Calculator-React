@@ -30,6 +30,10 @@ code {
   align-items: center;
 }
 
+.justify-c-end {
+  justify-content: flex-end;
+}
+
 .bg-orange {
   background-color: #FF5722;
 }
@@ -46,11 +50,13 @@ code {
 
 .display {
   background-color: #607D8B;
+  color: #fafafa;
+  font-weight: bold;
   height: 100px;
 }
 
 .display-text {
-  font-weight: bold;
+  padding-right: 10px;
 }
 
 .button-panel {
