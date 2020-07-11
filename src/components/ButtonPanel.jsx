@@ -5,15 +5,15 @@ const ButtonPannel = () => (
   <div className="">
     <div>
       <Button value="AC" />
-      <Button value="+" />
-      <Button value="-" />
+      <Button value="+/-" />
       <Button value="%" />
+      <Button value="÷" />
     </div>
     <div>
       <Button value="7" />
       <Button value="8" />
       <Button value="9" />
-      <Button value="7" />
+      <Button value="X" />
     </div>
     <div>
       <Button value="4" />
@@ -29,7 +29,7 @@ const ButtonPannel = () => (
     </div>
     <div>
       <Button value="0" />
-      <Button value="-" />
+      <Button value="." />
       <Button value="=" />
     </div>
   </div>
