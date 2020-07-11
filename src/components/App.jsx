@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="App d-flex flex-column  justify-c-column align-i-center">
         <Display result={result} />
-        <div class="calculator">
+        <div className="calculator">
           <ButtonPanel />
         </div>
       </div>
