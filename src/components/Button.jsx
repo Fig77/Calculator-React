@@ -5,7 +5,7 @@ const Button = ({ value, wide, color }) => {
   
   const  inline = () => {
     let w = '25%';
-    let c = '#ff5722';
+    let c = '#ff8e22';
     if (wide) { w = '50%';  }
     if (color) { c=color; }
     return {
@@ -24,6 +24,7 @@ const Button = ({ value, wide, color }) => {
 
 Button.propTypes = {
   value: PropTypes.string.isRequired,
+  wide: PropTypes.bool.isRequired,
+  color: PropTypes.string.isRequired
 };
-
 export default Button;
