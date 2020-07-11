@@ -3,25 +3,14 @@ import '../style/App.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.status = {
-      result: '0',
-    };
-  }
-
-  render() {
-    const { result } = this.status;
-    return (
-      <div className="App">
-        <Display result={result} />
-        <div>
-          <ButtonPanel />
-        </div>
-      </div>
-    );
-  }
+const App  = () => {
+return (
+  <div className="App">
+    <Display />
+    <div>
+      <ButtonPanel />
+    </div>
+  </div>
+ );
 }
 export default App;
