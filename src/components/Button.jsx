@@ -19,9 +19,6 @@ const Button = ({ value, wide, color }) => {
 );
 }
 
-
-
-
 Button.propTypes = {
   value: PropTypes.string.isRequired,
   wide: PropTypes.bool.isRequired,
