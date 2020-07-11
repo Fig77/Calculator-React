@@ -21,7 +21,7 @@ const Button = ({ value, wide, color }) => {
 
 Button.propTypes = {
   value: PropTypes.string.isRequired,
-  wide: PropTypes.bool.isRequired,
-  color: PropTypes.string.isRequired
+  wide: PropTypes.bool,
+  color: PropTypes.string
 };
 export default Button;
