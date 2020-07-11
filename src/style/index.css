@@ -41,7 +41,7 @@ code {
 /* Calculator */
 
 .calculator {
-  min-width: 700px;
+  width: 700px;
   max-width: 700px;
   border-bottom-style: solid;
   border-color: #3a3a3a;
@@ -56,7 +56,7 @@ code {
 }
 
 .display-text {
-  padding-right: 10px;
+  padding-right: 40px;
 }
 
 .button-panel {
