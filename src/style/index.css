@@ -25,3 +25,63 @@ code {
     'Courier New',
     monospace;
 }
+
+/* Quick general rules  */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-c-center {
+  justify-content: center;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+.justify-c-end {
+  justify-content: flex-end;
+}
+
+.bg-yellow-orange {
+  background-color: #ff8e22;
+}
+
+/* Calculator */
+
+.calculator {
+  width: 700px;
+  max-width: 700px;
+  border-bottom-style: solid;
+  border-color: #3a3a3a;
+  border-width: thin;
+}
+
+.display {
+  background-color: #607d8b;
+  color: #fafafa;
+  font-weight: bold;
+  height: 100px;
+}
+
+.display-text {
+  padding-right: 40px;
+}
+
+.group {
+  height: 100px;
+}
+
+.button {
+  color: #212121;
+  width: 25%;
+  border-style: solid;
+  border-color: #3a3a3a;
+  border-width: thin;
+  height: 100%;
+}
