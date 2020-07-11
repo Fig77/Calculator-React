@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../syles/App.css';
+import '../style/App.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
