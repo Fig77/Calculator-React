@@ -1,13 +1,4 @@
-# Calculator APP
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Objective is the deployment of a simple calculator using react in heroku. ReadMe will be updated in future versions.
-
-### LIVE DEPLOY
-
-You can see the live version [here](https://calculatordeploy.herokuapp.com/).
-
-##*This readme has default information. 
 
 ## Available Scripts
 
