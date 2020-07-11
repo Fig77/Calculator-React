@@ -6,8 +6,8 @@ const operate = (numberOne, numberTwo, operation) => {
   if (numberTwo === 0) {
     return 'inf';
   } else {
-    let result = numberOne.operate(numberTwo);
-    return result;
+  let result = numberOne.operation(numberTwo);
+  return result;
   }
 
 };
