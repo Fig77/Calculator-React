@@ -11,3 +11,5 @@ const operate = (numberOne, numberTwo, operation) => {
   }
 
 };
+
+import default operate;
