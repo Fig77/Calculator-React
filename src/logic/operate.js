@@ -1,15 +1,30 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  let one = new Big(numberOne);
-  let two = new Big(numberTwo);
-  if (numberTwo === 0) {
-    return 'inf';
-  } else {
-  let result = numberOne.operation(numberTwo);
-  return result;
+  console.log(numberOne);
+  const one = Big(numberOne);
+  const two = Big(numberTwo);
+  switch (operation) {
+    case '-': {
+      return one.minus(two);
+    }
+    case '+': {
+      console.log(one, two, operation);
+      return one.plus(two);
+    }
+    case '/': {
+      return one.div(two);
+    }
+    case '%': {
+      return one.mod(two);
+    }
+    case '*': {
+      return one.times(two);
+    }
+    default: {
+      return 'undef error';
+    }
   }
-
 };
 
-import default operate;
+export default operate;
