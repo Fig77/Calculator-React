@@ -1,4 +1,4 @@
-import operate from 'operate';
+import operate from './operate';
 
 const errorCheck = (one, two, operation) => {
   if (two === '0' && operation === '/') {
