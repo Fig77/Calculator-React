@@ -1,16 +1,5 @@
 import operate from './operate';
 
-const errorCheck = (one, two, operation) => {
-  if (one === '0' && two === '0' && operation === '/') {
-    return setTotal('Undefined', null, null);
-  }
-  if (two === '0' && operation === '/') {
-    return setTotal('INF', null, null);
-  }
-
-  return true;
-};
-
 const setTotal = (newTotal, newNext, newOperation) => {
   const total = newTotal;
   const next = newNext;
@@ -20,6 +9,17 @@ const setTotal = (newTotal, newNext, newOperation) => {
     next,
     operation,
   };
+};
+
+const errorCheck = (one, two, operation) => {
+  if (one === '0' && two === '0' && operation === '/') {
+    return setTotal('Undefined', null, null);
+  }
+  if (two === '0' && operation === '/') {
+    return setTotal('INF', null, null);
+  }
+
+  return true;
 };
 
 const calculate = ({
@@ -62,5 +62,5 @@ const calculate = ({
 };
 
 export default {
-  calculate
+  calculate,
 };
