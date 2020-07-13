@@ -5,8 +5,8 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 
 const App  = () => {
-  let total = '='; // by def should be always 0 no matter what
-  let next = '=';
+  let total = '+'; // by def should be always 0 no matter what
+  let next = '+';
   let operation = '+';
   let culator = {total, next, operation};
   let tt = calculate(culator, '=');

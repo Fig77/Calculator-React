@@ -1,8 +1,14 @@
 const Big = require('big.js');
 
 const operate = (numberOne, numberTwo, operation) => {
-  let one = new Big(numberOne);
-  let two = new Big(numberTwo);
+  let one;
+  let two;
+  try {
+    one = new Big(numberOne); 
+    two = new Big(numberTwo);
+  } catch {
+    return 'Syntax Error'
+  }
   switch (operation) {
     case '-': {
       return one.minus(two);
