@@ -4,10 +4,10 @@ const operate = (numberOne, numberTwo, operation) => {
   let one;
   let two;
   try {
-    one = new Big(numberOne); 
+    one = new Big(numberOne);
     two = new Big(numberTwo);
-  } catch {
-    return 'Syntax Error'
+  } catch (err) {
+    return 'Syntax Error';
   }
   switch (operation) {
     case '-': {
@@ -19,9 +19,8 @@ const operate = (numberOne, numberTwo, operation) => {
     case '/': {
       if (numberTwo === 0) {
         return 'INF';
-      } else {
-        return one.div(two);
       }
+      return one.div(two);
     }
     case '%': {
       return one.mod(two);
