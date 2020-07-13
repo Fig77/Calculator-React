@@ -2,16 +2,7 @@ import
 calculate
   from './logic/calculate';
 
-describe('quick calculatortest', () => {
-  test('call +/- and get negative if positive', () => {
-    const answ = calculate.calculate({
-      total: 10,
-      next: '',
-      operation: '+/-',
-    }, '');
-    expect(answ.result.total.toString()).toBe('-10');
-  });
-
+describe('especial cases on calculator', () => {
   test('number/0 should return INF', () => {
     const answ = calculate.calculate({
       total: 10,
@@ -39,13 +30,24 @@ describe('quick calculatortest', () => {
     expect(answ.result.total.toString()).toBe('Syntax Error');
   });
 
-  test('0 -> operation -> operation should return syntax error', () => {
+  test('operation -> operation -> operation should return syntax error', () => {
     const answ = calculate.calculate({
       total: 0,
       next: '+',
       operation: '/',
     }, '=');
     expect(answ.result.total.toString()).toBe('Syntax Error');
+  });
+});
+
+describe('Basic algebra test cases', () => {
+  test('call +/- and get negative if positive', () => {
+    const answ = calculate.calculate({
+      total: 10,
+      next: '',
+      operation: '+/-',
+    }, '');
+    expect(answ.result.total.toString()).toBe('-10');
   });
 
   test('number -> null -> = should return the same number', () => {
@@ -66,6 +68,15 @@ describe('quick calculatortest', () => {
     expect(answ.result.total.toString()).toBe('246');
   });
 
+  test('246 / 2 should return 123', () => {
+    const answ = calculate.calculate({
+      total: '246',
+      next: '2',
+      operation: '/',
+    }, '=');
+    expect(answ.result.total.toString()).toBe('123');
+  });
+
   test('31 % 3 should return 1', () => {
     const answ = calculate.calculate({
       total: 31,
@@ -75,11 +86,11 @@ describe('quick calculatortest', () => {
     expect(answ.result.total.toString()).toBe('1');
   });
 
-  test('1234 + -1235 should return 2469', () => {
+  test('1234 - 1235 should return -1', () => {
     const answ = calculate.calculate({
       total: '1234',
-      next: '-1235',
-      operation: '+',
+      next: '1235',
+      operation: '-',
     }, '=');
     expect(answ.result.total.toString()).toBe('-1');
   });
