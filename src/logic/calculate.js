@@ -10,12 +10,11 @@ const calculate = ({
   let newTotal = total;
   let newOperation = operation;
   let newNext = next;
+
   if (next === '' && operation !== '') {
     if (operation === '+/-' || operation === 'AC' || operation === '=') {
       return [cases[0]];
     }
-  } else if (newNext === '0' && operation === '/') {
-    return cases[1];
   }
   switch (newOperation) {
     case '+/-': {
@@ -44,7 +43,6 @@ const calculate = ({
       };
     }
     case '=': {
-      console.log(total, next, operation);
       newTotal = operate(total, next, operation);
       newNext = null;
       newOperation = null;

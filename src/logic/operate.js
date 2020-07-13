@@ -1,19 +1,21 @@
-import Big from 'big.js';
+const Big = require('big.js');
 
 const operate = (numberOne, numberTwo, operation) => {
-  console.log(numberOne);
-  const one = Big(numberOne);
-  const two = Big(numberTwo);
+  let one = new Big(numberOne);
+  let two = new Big(numberTwo);
   switch (operation) {
     case '-': {
       return one.minus(two);
     }
     case '+': {
-      console.log(one, two, operation);
       return one.plus(two);
     }
     case '/': {
-      return one.div(two);
+      if (numberTwo === 0) {
+        return 'INF';
+      } else {
+        return one.div(two);
+      }
     }
     case '%': {
       return one.mod(two);
