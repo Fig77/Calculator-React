@@ -1,9 +1,13 @@
 import operate from './operate';
 
 const errorCheck = (one, two, operation) => {
-  if (two === '0' && operation === '/') {
-    return 'INF';
+  if (one === '0' && two === '0' && operation === '/') {
+    return setTotal('Undefined', null, null);
   }
+  if (two === '0' && operation === '/') {
+    return setTotal('INF', null, null);
+  }
+
   return true;
 };
 
@@ -41,7 +45,11 @@ const calculate = ({
       break;
     }
     case '=': {
-      result = setTotal(operate(total, next, operation), null, null);
+      if (next !== '') {
+        result = setTotal(operate(total, next, operation), null, null);
+      } else {
+        result = setTotal(total, null, null);
+      }
       break;
     }
     default:
@@ -53,4 +61,6 @@ const calculate = ({
   };
 };
 
-export default calculate;
+export default {
+  calculate
+};
