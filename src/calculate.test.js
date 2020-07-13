@@ -2,7 +2,7 @@ import
 calculate
   from './logic/calculate';
 
-describe('especial cases on calculator', () => {
+describe('special cases on calculator', () => {
   test('number/0 should return INF', () => {
     const answ = calculate.calculate({
       total: 10,
