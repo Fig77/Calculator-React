@@ -18,7 +18,6 @@ const errorCheck = (one, two, operation) => {
   if (two === '0' && operation === '/') {
     return setTotal('INF', null, null);
   }
-
   return true;
 };
 

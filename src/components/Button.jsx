@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Comonent} from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ value, wide, color }) => {
+class Button extends Component {
   
   const  inline = () => {
     let w = '25%';
