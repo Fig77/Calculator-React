@@ -66,8 +66,6 @@ code {
   max-width: 700px;
 }
 
-
-
 .display {
   border-bottom-style: hidden;
   background-color: #607d8b;
@@ -88,6 +86,5 @@ code {
 .button {
   color: #212121;
   width: 25%;
-
   height: 100%;
 }

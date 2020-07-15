@@ -35,7 +35,7 @@ const btonCheck = (data, name) => {
     data.total = name;
   } else {
     if (lastButton === '=') {
-      data.total = ''+name;
+      data.total = '' + name;
     } else {
       data.total += name;
     }
@@ -83,14 +83,20 @@ const calculate = ({
       } else {
         result = setTotal(result.total, null, null);
       }
+
       break;
     }
     default:
-    break;
+      if (result.next !== null && operationSet.has(buttonName)) {
+         result = setTotal(operate(result.total, result.next, buttonName), null, buttonName);
+      } else {
+         setTotal(operate(result.total, null, null));
+      }
+      break;
   }
   let auxOp = setDefString(result.operation);
   let auxSec = setDefString(result.next);
-  result.display = result.total+auxOp+auxSec;
+  result.display = result.total + auxOp + auxSec;
   return {
     result
   };
