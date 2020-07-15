@@ -9,24 +9,25 @@ const operate = (numberOne, numberTwo, operation) => {
   } catch (err) {
     return 'Syntax Error';
   }
+  console.log(operation);
   switch (operation) {
     case '-': {
-      return one.minus(two);
+      return one.minus(two).toString();
     }
     case '+': {
-      return one.plus(two);
+      return one.plus(two).toString();
     }
-    case '/': {
+    case '÷': {
       if (numberTwo === 0) {
         return 'INF';
       }
-      return one.div(two);
+      return one.div(two).toString();
     }
     case '%': {
-      return one.mod(two);
+      return one.mod(two).toString();
     }
     case '*': {
-      return one.times(two);
+      return one.times(two).toString();
     }
     default: {
       return 'undef error';

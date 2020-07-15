@@ -1,9 +1,14 @@
-import React, {Comonent} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class Button extends Component {
-  
-  const  inline = () => {
+  render() {  
+    
+  const {
+      name, value, handleClick, wide, color,
+    } = this.props;
+    
+  const inline = () => {
     let w = '25%';
     let c = '#ff8e22';
     if (wide) { w = '50%';  }
@@ -13,10 +18,15 @@ class Button extends Component {
       width: w
     };
   };
-  
-  return (
-  <button className="button" style={inline()} type="button" value={value}>{value}</button>
-);
+    
+const handler = (e) =>{
+  handleClick(e.target.name);
+}
+
+return (
+  <button name={name} className="button" onClick={handler} style={inline()} type="button" value={value}>{value}</button>
+  );
+ };
 }
 
 Button.propTypes = {
@@ -25,3 +35,5 @@ Button.propTypes = {
   color: PropTypes.string
 };
 export default Button;
+
+
