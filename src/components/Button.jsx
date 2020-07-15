@@ -18,7 +18,7 @@ class Button extends Component {
       width: w
     };
   };
-    
+
 const handler = (e) =>{
   handleClick(e.target.name);
 }
@@ -32,7 +32,16 @@ return (
 Button.propTypes = {
   value: PropTypes.string.isRequired,
   wide: PropTypes.bool,
-  color: PropTypes.string
+  color: PropTypes.string,
+  name: PropTypes.string,
+
+};
+
+Button.defaultProps = {
+  name: '',
+  value: 'Button',
+  wide: false,
+  color: '#ff8e22'
 };
 export default Button;
 

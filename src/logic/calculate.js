@@ -1,7 +1,7 @@
 import operate from './operate';
 
-const operationSet = new Set(['+', 'X', '-', '÷', '%']);
-const triggerSet = new Set(['=', '+/-', 'AC']);
+const operationSet = new Set(['+', 'X', '-', '÷']);
+const triggerSet = new Set(['=', '+/-', 'AC', '%']);
 
 const lastButton = '';
 const setTotal = (newTotal, newNext, newOperation) => {
@@ -68,6 +68,14 @@ const calculate = ({
         break;
       }
       result.total = (result.total * -1).toString();
+      result.operation = null;
+      break;
+    }
+    case '%': {
+      if (next !== null) {
+        result = setTotal(operate(result.total, result.next, result.operation), null, null);
+      }
+      result = setTotal((operate(result.total, '100', '÷')), null, null);
       result.operation = null;
       break;
     }

@@ -15,8 +15,8 @@ constructor(props) {
   };
   this.handler = this.handler.bind(this);
 }
-  
-handler = (name) => {
+
+handler(name) {
   const data = calculate.calculate(this.state, name);
   this.setState(data.result);
 }
