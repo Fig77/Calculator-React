@@ -1,40 +1,54 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Button from './Button';
+import PropTypes from 'prop-types';
 
 const wide = true;
 let color = '#ff5722';
-const ButtonPanel = () => ( 
+class ButtonPanel extends Component {
+
+render() {
+
+const handler = e => {
+  this.props.handleClick(e);
+};
+
+  return ( 
   <div className="calculator">
     <div className="group">
-      <Button value="AC" color={color} />
-      <Button value="+/-" color={color} />
-      <Button value="÷" color={color} />
-      <Button value="%" color={color} />
+      <Button name="AC" value="AC" color={color} handleClick = {handler} />
+      <Button name="+/-" value="+/-" color={color} handleClick = {handler} />
+      <Button name="÷" value="÷" color={color} handleClick = {handler} />
+      <Button name="%" value="%" color={color} handleClick = {handler} />
     </div>
     <div className="group">
-      <Button value="7" />
-      <Button value="8" />
-      <Button value="9" />
-      <Button value="X" color={color} />
+      <Button name="7"value="7" handleClick = {handler} />
+      <Button name="8" value="8" handleClick = {handler} />
+      <Button name="9" value="9" handleClick = {handler} />
+      <Button name="X" value="X" color={color} handleClick = {handler} />
     </div>
     <div className="group">
-      <Button value="4" />
-      <Button value="5" />
-      <Button value="6" />
-      <Button value="-" color={color}/>
+      <Button name="4" value="4" handleClick = {handler} />
+      <Button name="5" value="5" handleClick = {handler} />
+      <Button name="6" value="6" handleClick = {handler} />
+      <Button name="-" value="-" color={color} handleClick = {handler}/>
     </div>
     <div className="group">
-      <Button value="1" />
-      <Button value="2" />
-      <Button value="3" />
-      <Button value="+" color={color} />
+      <Button name="1" value="1" handleClick = {handler} />
+      <Button name="2" value="2" handleClick = {handler} />
+      <Button name="3" value="3" handleClick = {handler} />
+      <Button name="+" value="+" color={color} handleClick = {handler} />
     </div>
     <div className="group">
-      <Button value="0" wide={wide}/>
-      <Button value="." />
-      <Button value="=" color={color} />
+      <Button name="0" value="0" wide={wide} handleClick = {handler}/>
+      <Button name="." value="." handleClick = {handler}/>
+      <Button name="=" value="=" color={color} handleClick = {handler} />
     </div>
   </div>
-);
+ );
+}
+}
   
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 export default ButtonPanel;

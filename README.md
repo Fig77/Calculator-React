@@ -1,77 +1,125 @@
-# Calculator APP
+# React Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Objective is the deployment of a simple calculator using react in heroku. ReadMe will be updated in future versions.
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+<br />
 
-### LIVE DEPLOY
+<p align="center">
+ 
+  <h2 align="center">React Calculator</h2>
+  <p align="center">
+    <br />
+    <a href="https://github.com/Fig77/calculator-react/"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    ·
+    <a href="https://github.com/Fig77/calculator-react/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Fig77/calculator-react/issues">Request Feature</a>
+  </p>
+</p>
+<!-- TABLE OF CONTENTS -->
 
-You can see the live version [here](https://calculatordeploy.herokuapp.com/).
+## Table of Contents
 
-##*This readme has default information. 
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+  - [Prerequisites](#prerequisites)
+- [Screenshots](#screenshots)
+- [How to start](#how-to-start)
+- [Testing](#testing)
+- [Live Version](#live-version)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+- [Contact](#contact)
 
-## Available Scripts
+<!-- ABOUT THE PROJECT -->
 
-In the project directory, you can run:
+## About The Project
 
-### `npm start`
+A simple calculator made with React. Functions implemented are: 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Simple Algebra functions (+ * / %)
+* Sign changer +/-
+* Chaining of operations (no brackets, calculating the last one before going to the next one)
+* Decimals
+* AC to clean everything
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Other definitions:
 
-### `npm test`
+* 0/0 as Undefined
+* A/0 as INF
+* INF + operation + number as INF
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**To be added**
 
-### `npm run build`
+* After = operation, reset when number is pressed.
+* Sign change on INF
+* Currently is tricky to add a negative to the right of the operation, that is noticed and will be handled.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built With
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Node.js
+* React
+* React-DOM
+* React-Create-App
+* npm
+* CSS
+* ES6
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Prerequisites
 
-### `npm run eject`
+- Node
+- NPM
+- React
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![screenshot](Readme/calc-1.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### How to start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Clone the repo with `git clone https://github.com/Fig77/calculator-react.git`, or download as a ZIP.
+* Run `npm install`
+* Run `npm start`
 
-## Learn More
+By default server will start in development on localhost, port 3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A few test are written for logic. To test them:
 
-### Code Splitting
+- Run `npm test`to run the test suites.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Live Version
 
-### Analyzing the Bundle Size
+- You can view the app hosted online [here](https://calculatordeploy.herokuapp.com).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<!-- FUTURE IMPROVEMENTS -->
 
-### Making a Progressive Web App
+## Future Improvements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+See the [open issues](https://github.com/Fig77/calculator-react/issues) for a list of proposed features (and known issues).
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<!-- LICENSE -->
 
-### Deployment
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### `npm run build` fails to minify
+<!-- CONTACT -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contact
+
+Facundo Iglesias - [Github profile](https://github.com/Fig77)
+
+Project Link: [Project repo](https://github.com/Fig77/calculator-react/)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-%2300ff00
+[contributors-url]: https://github.com/Fig77/calculator-react//graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/Fig77/calculator-react//issues/

@@ -7,25 +7,16 @@ describe('special cases on calculator', () => {
     const answ = calculate.calculate({
       total: 10,
       next: 0,
-      operation: '/',
+      operation: '÷',
     }, '=');
     expect(answ.result.total.toString()).toBe('INF');
-  });
-
-  test('0/0 should return Undefined', () => {
-    const answ = calculate.calculate({
-      total: '0',
-      next: '0',
-      operation: '/',
-    }, '=');
-    expect(answ.total.toString()).toBe('Undefined');
   });
 
   test('0 -> operation -> operation should return syntax error', () => {
     const answ = calculate.calculate({
       total: 0,
       next: '+',
-      operation: '/',
+      operation: '÷',
     }, '=');
     expect(answ.result.total.toString()).toBe('Syntax Error');
   });
@@ -34,7 +25,7 @@ describe('special cases on calculator', () => {
     const answ = calculate.calculate({
       total: 0,
       next: '+',
-      operation: '/',
+      operation: '÷',
     }, '=');
     expect(answ.result.total.toString()).toBe('Syntax Error');
   });
@@ -44,17 +35,17 @@ describe('Basic algebra test cases', () => {
   test('call +/- and get negative if positive', () => {
     const answ = calculate.calculate({
       total: 10,
-      next: '',
+      next: null,
       operation: '+/-',
-    }, '');
+    }, '+/-');
     expect(answ.result.total.toString()).toBe('-10');
   });
 
   test('number -> null -> = should return the same number', () => {
     const answ = calculate.calculate({
       total: '34562',
-      next: '',
-      operation: '=',
+      next: null,
+      operation: null,
     }, '=');
     expect(answ.result.total.toString()).toBe('34562');
   });
@@ -63,7 +54,7 @@ describe('Basic algebra test cases', () => {
     const answ = calculate.calculate({
       total: '123',
       next: '2',
-      operation: '*',
+      operation: 'X',
     }, '=');
     expect(answ.result.total.toString()).toBe('246');
   });
@@ -72,7 +63,7 @@ describe('Basic algebra test cases', () => {
     const answ = calculate.calculate({
       total: '246',
       next: '2',
-      operation: '/',
+      operation: '÷',
     }, '=');
     expect(answ.result.total.toString()).toBe('123');
   });
