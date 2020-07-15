@@ -24,7 +24,7 @@ const handler = (e) =>{
 }
 
 return (
-  <button name={name} className="button" onClick={handler} style={inline()} type="button" value={value}>{value}</button>
+  <button name={name} className="button border" onClick={handler} style={inline()} type="button" value={value}>{value}</button>
   );
  };
 }

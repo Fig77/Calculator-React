@@ -25,8 +25,9 @@ render() {
 const { display } = this.state;
 return (
   <div className="App d-flex flex-column justify-c-center align-i-center">
-    <Display result = {display}/>
     <div>
+    <Display result = {display}/>
+    
       <ButtonPanel handleClick = {this.handler} />
     </div>
   </div>

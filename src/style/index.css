@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: #b2dfdb;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -52,19 +53,26 @@ code {
   background-color: #ff8e22;
 }
 
+.border {
+  border-style: solid;
+  border-color: #3a3a3a;
+  border-width: thin;
+}
+
 /* Calculator */
 
 .calculator {
   width: 700px;
   max-width: 700px;
-  border-bottom-style: solid;
-  border-color: #3a3a3a;
-  border-width: thin;
 }
 
+
+
 .display {
+  border-bottom-style: hidden;
   background-color: #607d8b;
   color: #fafafa;
+  width: 698px;
   font-weight: bold;
   height: 100px;
 }
@@ -80,8 +88,6 @@ code {
 .button {
   color: #212121;
   width: 25%;
-  border-style: solid;
-  border-color: #3a3a3a;
-  border-width: thin;
+
   height: 100%;
 }
