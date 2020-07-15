@@ -1,10 +1,9 @@
 const Big = require('big.js');
 
-
 const operate = (numberOne, numberTwo, operation) => {
   let one;
   let two;
-  if (numberOne==='INF' || numberOne === '-INF') {
+  if (numberOne === 'INF' || numberOne === '-INF') {
     return numberOne;
   }
   try {
@@ -25,9 +24,8 @@ const operate = (numberOne, numberTwo, operation) => {
         // eslint-disable-next-line
         if (numberOne == 0) {
           return 'Undefined';
-        } else {
-          return 'INF';
         }
+        return 'INF';
       }
       return one.div(two).toString();
     }

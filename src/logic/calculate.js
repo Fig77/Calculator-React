@@ -3,7 +3,7 @@ import operate from './operate';
 const operationSet = new Set(['+', 'X', '-', '÷', '%']);
 const triggerSet = new Set(['=', '+/-', 'AC']);
 
-let lastButton = '';
+const lastButton = '';
 const setTotal = (newTotal, newNext, newOperation) => {
   const total = newTotal;
   const next = newNext;
@@ -16,51 +16,49 @@ const setTotal = (newTotal, newNext, newOperation) => {
 };
 
 const btonCheck = (data, name) => {
+  const result = data;
   if ((triggerSet.has(name) || operationSet.has(name))) {
     if (data.operation === null) {
-      data.operation = name;
+      result.operation = name;
     }
     return data;
-  } else if (data.operation !== null) {
+  } if (data.operation !== null) {
     if (data.next === null) {
-      let aux = name === '0' ? 0 : name;
-      data.next = aux
-      return data;
-    } else {
-      data.next += name;
-      return data;
+      const aux = name === '0' ? 0 : name;
+      result.next = aux;
+      return result;
     }
+    result.next += name;
+    return result;
   }
   if (data.total === '0') {
-    data.total = name;
+    result.total = name;
+  } else if (lastButton === '=') {
+    result.total = `${name}`;
   } else {
-    if (lastButton === '=') {
-      data.total = '' + name;
-    } else {
-      data.total += name;
-    }
+    result.total += name;
   }
-  return data;
-}
+  return result;
+};
 
-const setDefString = (string) => {
+const setDefString = string => {
   if (string === null) {
     return '';
   }
   return string;
-}
+};
 
 const calculate = ({
   total,
   next,
   operation,
-  display
+  display,
 }, buttonName) => {
   let result = btonCheck({
     total,
     next,
     operation,
-    display
+    display,
   }, buttonName);
 
   switch (buttonName) {
@@ -88,17 +86,17 @@ const calculate = ({
     }
     default:
       if (result.next !== null && operationSet.has(buttonName)) {
-         result = setTotal(operate(result.total, result.next, buttonName), null, buttonName);
+        result = setTotal(operate(result.total, result.next, buttonName), null, buttonName);
       } else {
-         setTotal(operate(result.total, null, null));
+        setTotal(operate(result.total, null, null));
       }
       break;
   }
-  let auxOp = setDefString(result.operation);
-  let auxSec = setDefString(result.next);
+  const auxOp = setDefString(result.operation);
+  const auxSec = setDefString(result.next);
   result.display = result.total + auxOp + auxSec;
   return {
-    result
+    result,
   };
 };
 
