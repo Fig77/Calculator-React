@@ -1,8 +1,9 @@
 import operate from './operate';
 
-const operationSet = new Set(['+', '*', '-', '÷', '%']);
+const operationSet = new Set(['+', 'X', '-', '÷', '%']);
 const triggerSet = new Set(['=', '+/-', 'AC']);
 
+let lastButton = '';
 const setTotal = (newTotal, newNext, newOperation) => {
   const total = newTotal;
   const next = newNext;
@@ -12,13 +13,6 @@ const setTotal = (newTotal, newNext, newOperation) => {
     next,
     operation,
   };
-};
-
-const errorCheck = (one, two, operation) => {
-  if (two === '0' && operation === '÷') {
-    return setTotal('INF', null, null);
-  }
-  return true;
 };
 
 const btonCheck = (data, name) => {
@@ -37,30 +31,38 @@ const btonCheck = (data, name) => {
       return data;
     }
   }
-
-  if (data.total == 0) {
+  if (data.total === '0') {
     data.total = name;
   } else {
-    data.total += name;
+    if (lastButton === '=') {
+      data.total = ''+name;
+    } else {
+      data.total += name;
+    }
   }
   return data;
+}
+
+const setDefString = (string) => {
+  if (string === null) {
+    return '';
+  }
+  return string;
 }
 
 const calculate = ({
   total,
   next,
   operation,
+  display
 }, buttonName) => {
   let result = btonCheck({
     total,
     next,
-    operation
+    operation,
+    display
   }, buttonName);
-  let test = errorCheck(result.total, result.next, result.operation);
-  if (test !== true) {
-    return result;
-  }
-  console.log(result);
+
   switch (buttonName) {
     case '+/-': {
       if (next !== null) {
@@ -84,11 +86,13 @@ const calculate = ({
       break;
     }
     default:
-      break;
+    break;
   }
+  let auxOp = setDefString(result.operation);
+  let auxSec = setDefString(result.next);
+  result.display = result.total+auxOp+auxSec;
   return {
-
-    result,
+    result
   };
 };
 

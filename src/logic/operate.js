@@ -1,15 +1,18 @@
 const Big = require('big.js');
 
+
 const operate = (numberOne, numberTwo, operation) => {
   let one;
   let two;
+  if (numberOne==='INF' || numberOne === '-INF') {
+    return numberOne;
+  }
   try {
     one = new Big(numberOne);
     two = new Big(numberTwo);
   } catch (err) {
     return 'Syntax Error';
   }
-  console.log(operation);
   switch (operation) {
     case '-': {
       return one.minus(two).toString();
@@ -19,14 +22,19 @@ const operate = (numberOne, numberTwo, operation) => {
     }
     case '÷': {
       if (numberTwo === 0) {
-        return 'INF';
+        // eslint-disable-next-line
+        if (numberOne == 0) {
+          return 'Undefined';
+        } else {
+          return 'INF';
+        }
       }
       return one.div(two).toString();
     }
     case '%': {
       return one.mod(two).toString();
     }
-    case '*': {
+    case 'X': {
       return one.times(two).toString();
     }
     default: {

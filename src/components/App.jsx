@@ -11,6 +11,7 @@ constructor(props) {
     total: '0',
     next: null,
     operation: null,
+    display: '0'
   };
   this.handler = this.handler.bind(this);
 }
@@ -21,10 +22,10 @@ handler = (name) => {
 }
 
 render() {
-const { total } = this.state;
+const { display } = this.state;
 return (
   <div className="App d-flex flex-column justify-c-center align-i-center">
-    <Display result = {total}/>
+    <Display result = {display}/>
     <div>
       <ButtonPanel handleClick = {this.handler} />
     </div>
