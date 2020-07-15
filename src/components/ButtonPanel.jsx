@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import Button from './Button';
+import PropTypes from 'prop-types';
 
 const wide = true;
 let color = '#ff5722';
 class ButtonPanel extends Component {
-  
+
 render() {
-const { handleClick } = this.props;
+
 const handler = e => {
-  handleClick(e);
+  this.props.handleClick(e);
 };
+
   return ( 
   <div className="calculator">
     <div className="group">
@@ -46,4 +48,7 @@ const handler = e => {
 }
 }
   
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 export default ButtonPanel;
