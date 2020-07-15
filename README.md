@@ -26,7 +26,7 @@
   - [Built With](#built-with)
   - [Prerequisites](#prerequisites)
 - [Screenshots](#screenshots)
-- [Playing Locally](#how-to-start)
+- [How to start](#how-to-start)
 - [Testing](#testing)
 - [Live Version](#live-version)
 - [Future Improvements](#future-improvements)
@@ -55,6 +55,7 @@ Other definitions:
 
 * After = operation, reset when number is pressed.
 * Sign change on INF
+* Currently is tricky to add a negative to the right of the operation, that is noticed and will be handled.
 
 ### Built With
 
