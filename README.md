@@ -25,10 +25,8 @@
 - [About the Project](#about-the-project)
   - [Built With](#built-with)
   - [Prerequisites](#prerequisites)
-- [Credit](#credit)
 - [Screenshots](#screenshots)
-- [How To Play](#how-to-play)
-- [Playing Locally](#playing-locally)
+- [Playing Locally](#how-to-start)
 - [Testing](#testing)
 - [Live Version](#live-version)
 - [Future Improvements](#future-improvements)
@@ -52,12 +50,11 @@ Other definitions:
 * 0/0 as Undefined
 * A/0 as INF
 * INF + operation + number as INF
-* Sign change on INF + +/-. (Not properly implemented, therefore -INF * -A = -INF)
 
 **To be added**
 
 * After = operation, reset when number is pressed.
-* Sign change on INF * number and INF / number
+* Sign change on INF
 
 ### Built With
 
