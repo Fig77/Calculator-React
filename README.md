@@ -53,7 +53,7 @@ Other definitions:
 
 **To be added**
 
-* After = operation, reset when number is pressed.
+* After = operation, reset when a number is pressed.
 * Sign change on INF
 * Currently is tricky to add a negative to the right of the operation, that is noticed and will be handled.
 
@@ -83,13 +83,13 @@ Other definitions:
 * Run `npm install`
 * Run `npm start`
 
-By default server will start in development on localhost, port 3000.
+By default, the server will start in development on localhost, port 3000.
 
 ## Testing
 
-A few test are written for logic. To test them:
+A few tests are in place for logic. To test them:
 
-- Run `npm test`to run the test suites.
+- Run `npm test` to run the test suites.
 
 ## Live Version
 
