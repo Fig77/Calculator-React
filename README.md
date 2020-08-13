@@ -5,7 +5,6 @@
 <br />
 
 <p align="center">
- 
   <h2 align="center">React Calculator</h2>
   <p align="center">
     <br />
@@ -19,21 +18,6 @@
   </p>
 </p>
 <!-- TABLE OF CONTENTS -->
-
-## Table of Contents
-
-- [About the Project](#about-the-project)
-  - [Built With](#built-with)
-  - [Prerequisites](#prerequisites)
-- [Screenshots](#screenshots)
-- [How to start](#how-to-start)
-- [Testing](#testing)
-- [Live Version](#live-version)
-- [Future Improvements](#future-improvements)
-- [License](#license)
-- [Contact](#contact)
-
-<!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
@@ -51,11 +35,24 @@ Other definitions:
 * A/0 as INF
 * INF + operation + number as INF
 
-**To be added**
+## Table of Contents
+- [Installation](#installation)
+  - [Built With](#built-with)
+  - [Prerequisites](#prerequisites)
+- [Usage](#usage)
+  - [Screenshots](#screenshots)
+  - [Live Version](#live-version)
+- [Testing](#testing)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+- [Contact](#contact)
 
-* After = operation, reset when a number is pressed.
-* Sign change on INF
-* Currently is tricky to add a negative to the right of the operation, that is noticed and will be handled.
+<!-- ABOUT THE PROJECT -->
+
+## Installation
+
+* Clone the repo with `git clone https://github.com/Fig77/calculator-react.git`, or download as a ZIP.
+* Run `npm install`
 
 ### Built With
 
@@ -73,17 +70,19 @@ Other definitions:
 - NPM
 - React
 
-## Screenshots
+## Usage
 
-![screenshot](Readme/calc-1.png)
-
-### How to start
-
-* Clone the repo with `git clone https://github.com/Fig77/calculator-react.git`, or download as a ZIP.
-* Run `npm install`
 * Run `npm start`
 
 By default, the server will start in development on localhost, port 3000.
+
+### Screenshots
+
+![screenshot](Readme/calc-1.png)
+
+### Live Version
+
+- You can view the app hosted online [here](https://calculatordeploy.herokuapp.com).
 
 ## Testing
 
@@ -91,16 +90,11 @@ A few tests are in place for logic. To test them:
 
 - Run `npm test` to run the test suites.
 
-## Live Version
-
-- You can view the app hosted online [here](https://calculatordeploy.herokuapp.com).
-
 <!-- FUTURE IMPROVEMENTS -->
 
 ## Future Improvements
 
 See the [open issues](https://github.com/Fig77/calculator-react/issues) for a list of proposed features (and known issues).
-
 
 <!-- LICENSE -->
 
