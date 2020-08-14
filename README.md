@@ -29,6 +29,7 @@ A simple calculator that includes basic algebraic operations. A full list of fun
   - [Live Version](#live-version)
 - [Testing](#testing)
 - [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -98,6 +99,13 @@ A few tests are in place for logic. To test them:
 * Small history display on the side, showing the last few operations.
 
 See the [open issues](https://github.com/Fig77/calculator-react/issues) for a list of proposed features (and known issues).
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
 
 <!-- LICENSE -->
 
