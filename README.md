@@ -19,19 +19,7 @@
 
 ## About The Project
 
-A simple calculator made with React. Functions implemented are: 
-
-* Simple Algebra functions (+ * / %)
-* Sign changer +/-
-* Chaining of operations (no brackets, calculating the last one before going to the next one)
-* Decimals
-* AC to clean everything
-
-Other definitions:
-
-* 0/0 as Undefined
-* A/0 as INF
-* INF + operation + number as INF
+A simple calculator that includes basic algebraic operations. A full list of functions & operations implemented can be seen [here](#functions-implemented). Made with React.
 
 ## Table of Contents
 - [Built With](#built-with)
@@ -68,6 +56,20 @@ Other definitions:
 
 * Clone the repo with `git clone https://github.com/Fig77/calculator-react.git`, or download as a ZIP.
 * Run `npm install`
+
+## Functions implemented
+
+* Simple Algebra functions (+ * / %)
+* Sign changer +/-
+* Chaining of operations (no brackets, calculating the last one before going to the next one)
+* Decimals
+* AC to clean everything
+
+Other definitions:
+
+* 0/0 as Undefined
+* A/0 as INF
+* INF + operation + number as INF
 
 ## Usage
 
