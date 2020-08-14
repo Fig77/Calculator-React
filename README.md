@@ -49,12 +49,7 @@ Other definitions:
 
 <!-- ABOUT THE PROJECT -->
 
-## Installation
-
-* Clone the repo with `git clone https://github.com/Fig77/calculator-react.git`, or download as a ZIP.
-* Run `npm install`
-
-### Built With
+## Built With
 
 * Node.js
 * React
@@ -64,11 +59,17 @@ Other definitions:
 * CSS
 * ES6
 
-## Prerequisites
+## Installation
 
+### Prerequisites
 - Node
 - NPM
 - React
+
+---
+
+* Clone the repo with `git clone https://github.com/Fig77/calculator-react.git`, or download as a ZIP.
+* Run `npm install`
 
 ## Usage
 
