@@ -95,6 +95,9 @@ A few tests are in place for logic. To test them:
 
 ## Future Improvements
 
+* Definition for changing sign of INF.
+* Small history display on the side, showing the last few operation.
+
 See the [open issues](https://github.com/Fig77/calculator-react/issues) for a list of proposed features (and known issues).
 
 <!-- LICENSE -->
