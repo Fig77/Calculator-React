@@ -107,10 +107,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Facundo Iglesias - [Github profile](https://github.com/Fig77)
+## Contact📱
 
-Project Link: [Project repo](https://github.com/Fig77/calculator-react/)
-
+- Facundo Iglesias - [Github profile](https://github.com/Fig77)
+- Email - fig.igle@gmail.com
+- LinkedIn - linkedin.com/in/figlesias.com
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
