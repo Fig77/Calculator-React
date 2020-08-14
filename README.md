@@ -36,8 +36,8 @@ Other definitions:
 * INF + operation + number as INF
 
 ## Table of Contents
+- [Built With](#built-with)
 - [Installation](#installation)
-  - [Built With](#built-with)
   - [Prerequisites](#prerequisites)
 - [Usage](#usage)
   - [Screenshots](#screenshots)
