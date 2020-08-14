@@ -9,7 +9,6 @@
     <a href="https://github.com/Fig77/calculator-react/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    ·
     <a href="https://github.com/Fig77/calculator-react/issues">Report Bug</a>
     ·
     <a href="https://github.com/Fig77/calculator-react/issues">Request Feature</a>
